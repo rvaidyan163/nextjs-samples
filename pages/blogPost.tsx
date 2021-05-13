@@ -1,10 +1,6 @@
 import utilStyles from '../styles/utils.module.css'
 import Layout from '../components/layout'
-import { BlogPostDataProps, getSortedPostsData } from '../lib/posts'
-
-type AllPostsDataProps = {
-    props: {allPostsData: BlogPostDataProps[];}
-}
+import { getSortedPostsData } from '../lib/posts'
 
 export async function getStaticProps()  {
     const allPostsData = getSortedPostsData()
