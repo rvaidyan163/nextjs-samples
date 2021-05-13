@@ -1,15 +1,17 @@
-import Nav from '../components/Nav'
 import Head from "next/head"
 import { Component } from 'react'
 import { attributes, react as HomeContent } from '../content/home.md'
 import Layout from '../components/layout'
+import Nav from '../components/Nav'
 import { useRouter } from 'next/router'
 
-const IndexPage = () => {
+const SlugPage = () => {
   const { asPath } = useRouter()
+  const { link,  } = asPath;
   const { title, cats } = attributes;
+  const isHome = asPath.endsWith("Home") || asPath.endsWith("/");
   return (
-    <Layout home>
+    <Layout home={isHome}>
       <>
         <Head>
           <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
@@ -33,4 +35,4 @@ const IndexPage = () => {
   )
 }
 
-export default IndexPage
+export default SlugPage
