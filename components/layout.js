@@ -32,7 +32,7 @@ export default function Layout({ children, home }) {
       <header className={styles.header}>
         {home ? (
           <>
-            <Image
+            {/* <Image
               loader={myLoader}
               priority
               src="/images/profile.jpg"
@@ -40,14 +40,14 @@ export default function Layout({ children, home }) {
               height={144}
               width={144}
               alt={name}
-            />
+            /> */}
             <h1 className={utilStyles.heading2Xl}>{name}</h1>
           </>
         ) : (
           <>
             <Link href="/">
               <a>
-                <Image
+                {/* <Image
                   loader={myLoader}
                   priority
                   src="/images/profile.jpg"
@@ -55,7 +55,7 @@ export default function Layout({ children, home }) {
                   height={108}
                   width={108}
                   alt={name}
-                />
+                /> */}
               </a>
             </Link>
             <h2 className={utilStyles.headingLg}>
