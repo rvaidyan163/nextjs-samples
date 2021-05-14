@@ -7,6 +7,10 @@ import Link from 'next/link'
 const name = 'Ramesh Vaidyanathan'
 export const siteTitle = 'Next.js Sample Website'
 
+const myLoader = ({ src, width, quality }) => {
+  return `https://media.istockphoto.com/photos/portrait-of-siberian-kitten-picture-id950433510?b=1&k=6&m=950433510&s=170x170&h=4AeyyX7wQzrQ4e-8JOjmh1rwp9OS0F9fPg67dvntUQQ=`
+}
+
 export default function Layout({ children, home }) {
   return (
     <div className={styles.container}>
@@ -29,6 +33,7 @@ export default function Layout({ children, home }) {
         {home ? (
           <>
             <Image
+              loader={myLoader}
               priority
               src="/images/profile.jpg"
               className={utilStyles.borderCircle}
@@ -43,6 +48,7 @@ export default function Layout({ children, home }) {
             <Link href="/">
               <a>
                 <Image
+                  loader={myLoader}
                   priority
                   src="/images/profile.jpg"
                   className={utilStyles.borderCircle}
