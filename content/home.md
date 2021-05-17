@@ -8,8 +8,6 @@ cats:
     name: Lil Bub
   - description: 'Grumpy cat is an American celebrity cat known for her grumpy appearance.'
     name: Grumpy cat (Tardar Sauce)
-  - description: 'Ragdoll has a color point coat and blue eyes.'
-    name: Ragdoll 
 ---
 Welcome to my awesome page about cats of the internet.
 
